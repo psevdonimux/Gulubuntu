@@ -1,2 +1,2 @@
 # Gulubuntu
-Дистрибутив основаны на Lubuntu
+Gulubuntu - это дистрибутив, который основан на Lubuntu
