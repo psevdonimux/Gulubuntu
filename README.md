@@ -10,4 +10,4 @@ Gulubuntu - это дистрибутив, который основан на Lu
 # Меню
 ![](screenshots/3.png)
 
-# [Скачать](https://drive.google.com/file/d/1rbhW3reQGb9cSK-2X3o4besbeeSpwnK2/view?usp=sharing)
+# [Скачать](http://193.188.20.4/gulubuntu-24.04.1-2025.03.24-desktop-amd64.iso)
