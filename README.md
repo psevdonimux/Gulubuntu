@@ -1,6 +1,9 @@
 # Gulubuntu
 Gulubuntu - это дистрибутив, который основан на Lubuntu
 
+# Начало
+![](screenshots/0.png)
+
 # Рабочий стол
 ![](screenshots/1.png)
 
