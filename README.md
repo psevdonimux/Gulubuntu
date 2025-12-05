@@ -53,4 +53,4 @@ Gulubuntu — это проект с открытым исходным кодо�
 
 Присоединяйтесь и помогите сделать Gulubuntu еще удобнее и проще!
 
-# [Скачать](https://sourceforge.net/projects/gulubuntu/files/gulubuntu-24.04.1-2025.08.21-desktop-amd64.iso/download)
+# [Скачать](https://sourceforge.net/projects/gulubuntu/files/gulubuntu-24.04.1-2025.12.05-desktop-amd64.iso/download)
