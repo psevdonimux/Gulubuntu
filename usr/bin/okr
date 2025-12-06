@@ -1,0 +1,13 @@
+#!/bin/sh
+if [ -z $(pidof lxqt-panel) ]; then
+    pcmanfm-qt --desktop --profile=lxqt &
+    lxqt-panel &
+    sleep 1
+    nm-tray &
+    lxqt-powermanagement &
+else
+    pkill pcmanfm-qt
+    pkill lxqt-panel
+    pkill nm-tray
+    pkill -f lxqt-powermanagement
+fi

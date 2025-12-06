@@ -1,0 +1,3 @@
+#!/bin/sh
+
+php /usr/bin/scripts/vf.php $HOME

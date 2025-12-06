@@ -1,0 +1,17 @@
+#!/bin/sh
+POWERSAVE_FREQ=$(cat /sys/devices/system/cpu/cpu0/cpufreq/scaling_available_frequencies | tr ' ' '\n' | sort -rn | sed -n '3p')
+echo userspace | sudo tee /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor &
+echo 0 | sudo tee /sys/devices/system/cpu/cpu*/online & 
+echo $POWERSAVE_FREQ | sudo tee /sys/devices/system/cpu/cpu0/cpufreq/scaling_setspeed & 
+echo $POWERSAVE_FREQ | sudo tee /sys/devices/system/cpu/cpu0/cpufreq/scaling_max_freq & 
+echo $POWERSAVE_FREQ | sudo tee /sys/devices/system/cpu/cpu0/cpufreq/scaling_min_freq & 
+echo 0 | sudo tee /sys/devices/system/cpu/cpu0/cpufreq/boost & 
+echo 0 | sudo tee /sys/devices/system/cpu/cpu0/cpufreq/cpb & 
+echo low | sudo tee /sys/class/drm/card0/device/power_dpm_force_performance_level &
+echo 0 | sudo tee /proc/sys/vm/stat_interval &
+echo 6000 | sudo tee /proc/sys/vm/dirty_writeback_centisecs &
+echo 10 | sudo tee /sys/module/processor/parameters/latency_factor &
+echo 0 | sudo tee /sys/devices/system/cpu/cpu0/cpuidle/state*/disable &
+echo on | sudo tee  /sys/devices/system/cpu/cpu0/power/control &
+
+

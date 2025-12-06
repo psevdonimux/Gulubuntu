@@ -1,0 +1,2 @@
+#!/bin/sh
+thorium --app=$1 --start-maximized --disable-in-process-stack-traces --no-report-upload --no-crash-upload --disable-logging --disable-crash-reporter

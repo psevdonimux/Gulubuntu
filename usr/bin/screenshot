@@ -1,0 +1,2 @@
+#!/bin/sh
+scrot $HOME/Изображения/screen.png

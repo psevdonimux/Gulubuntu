@@ -1,0 +1,15 @@
+#!/bin/sh
+
+FIRST_MONITOR=$(xrandr | grep " connected" | awk '{print $1}' | head -n 1)
+
+CURRENT_VALUE=$(vibrant-cli "$FIRST_MONITOR" | grep 'Saturation' | awk '{print $NF}')
+
+if [ $(printf %.1s "$CURRENT_VALUE") = "0" ]; then
+    NEW_VALUE=1
+else
+    NEW_VALUE=0
+fi
+
+for monitor in $(xrandr | grep " connected" | awk '{print $1}'); do
+    vibrant-cli "$monitor" "$NEW_VALUE"
+done

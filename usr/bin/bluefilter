@@ -1,0 +1,8 @@
+#!/bin/sh
+if [ -z $(pidof redshift) ]; then
+ redshift -c /etc/xdg/xdg-lubuntu-live-environment/redshift.conf -t 4000:4000 &
+ xgamma -rgamma 0.8 -bgamma 0.8 &
+else
+ pkill redshift &
+ xgamma -gamma 1 &
+fi

@@ -1,0 +1,27 @@
+#!/bin/sh
+MAX_FREQ=$(cat /sys/devices/system/cpu/cpu0/cpufreq/cpuinfo_max_freq)
+echo 1 | sudo tee /sys/devices/system/cpu/cpu*/online & 
+sleep 2 #fix
+echo userspace | sudo tee /sys/devices/system/cpu/cpu*/cpufreq/scaling_governor &
+echo $MAX_FREQ | sudo tee /sys/devices/system/cpu/cpu*/cpufreq/scaling_setspeed & 
+echo $MAX_FREQ | sudo tee /sys/devices/system/cpu/cpu*/cpufreq/scaling_max_freq & 
+echo $MAX_FREQ | sudo tee /sys/devices/system/cpu/cpu*/cpufreq/scaling_min_freq & 
+echo 1 | sudo tee /sys/devices/system/cpu/cpu*/cpufreq/boost & 
+echo 1 | sudo tee /sys/devices/system/cpu/cpu*/cpufreq/cpb & 
+echo manual | sudo tee /sys/class/drm/card0/device/power_dpm_force_performance_level &
+echo 1 | sudo tee /sys/class/drm/card0/device/pp_power_profile_mode &
+echo 2 | sudo tee /sys/class/drm/card0/device/pp_dpm_sclk &
+echo 3 | sudo tee /sys/class/drm/card0/device/pp_dpm_mclk &
+echo 0 | sudo tee /proc/sys/vm/stat_interval &
+echo 0 | sudo tee /proc/sys/vm/swappiness &
+echo 0 | sudo tee /proc/sys/vm/compaction_proactiveness &
+echo 6000 | sudo tee /proc/sys/vm/dirty_writeback_centisecs &
+echo 2 | sudo tee /sys/module/processor/parameters/latency_factor &
+echo 1 | sudo tee /sys/module/processor/parameters/ignore_ppc &
+echo 1 | sudo tee /sys/module/processor/parameters/max_cstate &
+for cpu in /sys/devices/system/cpu/cpu*/cpuidle/state*/disable; do
+  echo 1 | sudo tee $cpu
+done
+for cpu in /sys/devices/system/cpu/cpu*/power/control; do
+  echo on | sudo tee $cpu
+done
