@@ -1,5 +1,0 @@
-#!/bin/sh
-
-for monitor in $(xrandr | grep " connected" | awk '{print $1}'); do
-    vibrant-cli "$monitor" "$1"
-done
