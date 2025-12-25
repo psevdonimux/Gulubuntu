@@ -3,8 +3,60 @@
 <head>
 	<title>Gulubuntu - Официальный сайт дистрибутива линукс</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="icon" href="images/icon.ico">
+	<link rel="stylesheet" href="css/base.css">
+	<link rel="stylesheet" href="css/panel-manager.css">
+	<link rel="stylesheet" href="css/panel-end-manager.css">
 </head>
 <body>
-	<p>Пока пусто</p>
+	<div id="panel">
+		<img id="logo" src="images/gulubuntu-logo.webp">
+	</div>
+	<div id="main">
+		<h1>Добро пожаловать</h1>
+		<img src="images/laptop.webp">
+		<a href="https://sourceforge.net/projects/gulubuntu/files/" download>
+			<button id="download">Скачать</button>
+		</a>
+	</div>
+	<div id="description">
+		<section>
+			<p>Gulubuntu - это дистрибутив, который, будучи основан на Lubuntu, стремится к минимализму и простоте, сохраняя при этом удобство использования.</p>
+			<h2>Цели:</h2>
+			<ol>
+				<li>
+					<strong>Упрощение использования для новичков</strong>
+					<ul>
+						<li>Создать интуитивно понятный графический интерфейс</li>
+						<li>Минимизировать необходимость работы с командной строкой</li>
+						<li>Реализовать графическую оболочку для множества системных настроек</li>
+					</ul>
+				</li>
+				<li>
+					<strong>Оптимизация ресурсопотребления</strong>
+					<ul>
+						<li>Минимизировать потребление оперативной памяти системой</li>
+						<li>Снизить нагрузку на процессор в режиме простоя</li>
+						<li>Оптимизировать дисковое пространство за счет удаления неиспользуемых компонентов</li>
+						<li>Улучшить энергоэффективность для продления времени работы от батареи</li>
+					</ul>
+				</li>
+				<li>
+					<strong>Расширение функциональности "из коробки"</strong>
+					<ul>
+						<li>Предустановить базовый набор пакетов с учетом ваших интересов</li>
+						<li>Предоставить лёгкие и при этом необходимые настройки в одном месте</li>
+						<li>Создать автоматические сценарии для повседневных задач</li>
+					</ul>
+				</li>
+			</ol>
+		</section>
+	</div>
+	<div id="panel-end">
+		<a href="https://github.com/psevdonimux/Gulubuntu">
+			<img id="git" src="images/github.webp">
+		</a>
+	</div>
+	<script type="module" src="js/main.js"></script>
 </body>
 </html>
