@@ -1,3 +1,5 @@
+[Русский](README.md) | [English](README.en.md)
+
 # Gulubuntu
 Gulubuntu is a distribution that, being based on Lubuntu, strives for minimalism and simplicity while maintaining ease of use.
 
